@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <link type="text/css" href="css/ui-lightness/jquery-ui-1.10.3.custom.css" rel="stylesheet" />
+        <script src="js/jquery-1.9.1.js" type="text/javascript"></script>
+        <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+        <script src='thumbSlider.js'></script>
+
+
+        <link rel="stylesheet" type="text/css" href="ThumbSlider.css"/>
+
+
+        
+
+        <style>
+            .slider {
+                width: 70%;
+            }
+        </style>
+
+    </head>
+    
+    <body>
+
+        <script>
+            $(document).ready(function () {
+                thumbSlider('.slider', {
+                    url: 'http://bockar-rabbit.narod.ru/Photo1/bockar-rabbit-%d.jpg',
+                    count: 36
+                });
+            });
+        </script>
+
+        <div class='slider'></div>
+
+    </body>
+</html>
