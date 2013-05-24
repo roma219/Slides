@@ -1,0 +1,39 @@
+.thumbSlider {
+  overflow: hidden;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.th-round {
+	background: #FEE3B7;
+    border: 1px solid #C97D02;
+    width: 0px;
+    height: 199px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+    display: inline-block;
+
+}
+
+.th-progress {
+    position: absolute;
+    width: 160px;
+    height: 5px;
+    top: 50px;
+    display: none;
+    z-index: 1;
+    top: 180px;
+}
+
+.th-thumb {
+    margin: 10px 0 10px 10px;
+    height: 180px;
+    width: 180px;
+    border: 1px solid #673B0F;
+    border-radius: 3px;
+}
+
+.th-progress > div {
+        background: orange;
+    }
