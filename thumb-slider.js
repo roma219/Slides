@@ -45,7 +45,7 @@ function thumbSlider(rClass, params) {
 
         //Задаем размеры картинок, прогресс-бара и всего контейнера 
          $('.th-round').css({
-            height: picWidth+22
+            height: picWidth+32
         });
         $('.th-thumb').css({
             width: picWidth,
@@ -63,12 +63,12 @@ function thumbSlider(rClass, params) {
         var $lastPic = $('.num' + lastPicNum);
         var $progress = $('.th-progress');
         $lastPic.unbind('mouseenter mousemove mouseleave');
-        lastPicNum = (($(rClass).width()-12) - ($(rClass).width()-12) % (picWidth+12)) / (picWidth+12);
+        lastPicNum = (($(rClass).width()-12) - ($(rClass).width()-12) % (picWidth+22)) / (picWidth+22);
         $lastPic = $('.num' + lastPicNum);
         var defaultPic, pixelsPerPic;
 
         $('.th-round').css({
-            width: lastPicNum*(picWidth+12)+10
+            width: lastPicNum*(picWidth+20)+10
         });
 
         $lastPic.mouseenter(function() {
@@ -78,7 +78,7 @@ function thumbSlider(rClass, params) {
                 left: $(this).offset().left + 10
             });
             $progress.css('display', 'block');
-
+            $(this).css({'box-shadow': '0 0 2px 2px rgb(210,114,5)'});
         });
 
         $lastPic.mousemove(function(event) {
@@ -93,6 +93,7 @@ function thumbSlider(rClass, params) {
         $lastPic.mouseleave(function() {
             $(this).attr('src', defaultPic);
             $progress.css('display', 'none');
+            $(this).css({'box-shadow': '1px 1px 1px 1px #ccc'});
         });
     }
 }
